@@ -4,23 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header></header>
-    <fieldset>
-      <nav>
-        <ul>
-          <li><a href="#section-weather">Home</a></li>
-          <li><a href="#section-news">News</a></li>
-          <li>Weather</li>
-          <li style="float: left">About</li>
-        </ul>
-      </nav>
-    </fieldset>
+    
+      <header>
+        <h1>Weather App</h1>
+        <fieldset class="navigation">
+          <nav>
+            <ul>
+              <li><a href="#section-weather">Home</a></li>
+              <li><a href="#section-news">News</a></li>
+              <li>Weather</li>
+              <li>About</li>
+            </ul>
+          </nav>
+        </fieldset>
+      </header>
     <main>
       <section id="section-weather">
         <div class="page">
-          <h1 class="section-weather-title">Latest Weather</h1>
+          <div class="section-weather-title">
+          <h1>Latest Weather</h1>
+          </div>
           <div class="archive">
             <article class="article">
               <section id="stats">
@@ -35,21 +41,23 @@
                 </div>
               </section>
               <div>
-                <img src="/Weather-Project/rainy.png" alt="Weather Image" />
+                <img src="rainy.png" alt="Weather Image" />
               </div>
             </article>
 
             <!-- 5 day forecast -->
             <div class="article-five-day">
               <article id="forecastContainer">
+                <div class="section-day-title">
                 <h2 id="forecastSection">5 Day Forecast</h2>
+                </div>
                 <h3>Salt Lake City</h3>
                 <div class="weather-day">
                   <!-- Day One -->
                   <div class="weather-day-column">
                     <span id="dayOneTitle" class="column-head">Day 1</span>
                     <img
-                      src="/Weather-Project/partiallycloudy.png"
+                      src="partiallycloudy.png"
                       alt="Weather Image"
                     />
                     <span class="temp-data">
@@ -60,7 +68,7 @@
                   <!-- Day Two -->
                   <div class="weather-day-column">
                     <span id="dayTwoTitle" class="column-head">Day 2</span>
-                    <img src="/Weather-Project/rainy.png" alt="Weather Image" />
+                    <img src="rainy.png" alt="Weather Image" />
                     <span class="temp-data">
                       <span>52</span>
                       <span>°F</span>
@@ -70,7 +78,7 @@
                   <div class="weather-day-column">
                     <span id="dayThreeTitle" class="column-head">Day 3</span>
                     <img
-                      src="/Weather-Project/partiallycloudy.png"
+                      src="partiallycloudy.png"
                       alt="Weather Image"
                     />
                     <span class="temp-data">
@@ -81,7 +89,7 @@
                   <!-- Day Four -->
                   <div class="weather-day-column">
                     <span id="dayFourTitle" class="column-head">Day 4</span>
-                    <img src="/Weather-Project/sunny.png" alt="Weather Image" />
+                    <img src="sunny.png" alt="Weather Image" />
                     <span class="temp-data">
                       <span>58</span>
                       <span>°F</span>
@@ -90,7 +98,7 @@
                   <!-- Day Five -->
                   <div class="weather-day-column">
                     <span id="dayFiveTitle" class="column-head">Day 5</span>
-                    <img src="/Weather-Project/windy.png" alt="Weather Image" />
+                    <img src="windy.png" alt="Weather Image" />
                     <span class="temp-data">
                       <span>58</span>
                       <span>°F</span>
@@ -114,28 +122,28 @@
               <p id="header-description">No article description.</p>
             </article>
             <article class="article"></article>
-              <img id="article-img-1" src="/Weather-Project/newspaper.jfif" alt="Main Article">
+              <img id="article-img-1" src="newspaper.jfif" alt="Main Article">
               <h2>
                 <a id="article-1-header">No article header</a>
               </h2>
               <p id="article-1-description">No article description.</p>
             </article>
             <article class="article"></article>
-              <img id="article-img-2" src="/Weather-Project/newspaper.jfif" alt="Main Article">
+              <img id="article-img-2" src="newspaper.jfif" alt="Main Article">
               <h2>
                 <a id="article-2-header">No article header</a>
               </h2>
               <p id="article-2-description">No article description.</p>
             </article>
             <article class="article">
-              <img id="article-img-3" src="/Weather-Project/newspaper.jfif" alt="Main Article">
+              <img id="article-img-3" src="newspaper.jfif" alt="Main Article">
               <h2>
                 <a id="article-3-header">No article header</a>
               </h2>
               <p id="article-3-description">No article description.</p>
             </article>
             <article class="article"></article>
-              <img id="article-img-4" src="/Weather-Project/newspaper.jfif" alt="Main Article">
+              <img id="article-img-4" src="newspaper.jfif" alt="Main Article">
               <h2>
                 <a id="article-4-header">No article header</a>
               </h2>

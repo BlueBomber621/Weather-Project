@@ -1,0 +1,97 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  max-width: 100%;
+}
+
+/* Header */
+header {
+  background-color: cornsilk;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  display: inline-flex;
+  max-height: 200px;
+  justify-content: space-between;
+}
+
+header h1 {
+  text-align: center;
+  color: #ff9974;
+  text-shadow: 2px 2px #eee;
+}
+
+/* Navigation */
+fieldset.navigation {
+  position: relative;
+  z-index: 2;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  margin: auto 5px;
+  justify-content: space-around;
+}
+nav {
+  z-index: 2;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  margin: 4px 4px;
+}
+
+/* Main */
+
+main {
+  padding-top: 103px;
+  background-color: blanchedalmond;
+}
+
+/* Weather Data */
+
+#section-weather {
+  margin: 10px;
+}
+
+.section-weather-title,
+.section-day-title {
+  background-color: #ffcc74;
+  padding: 10px;
+  text-align: center;
+}
+
+.section-weather-title h1,
+.section-day-title h2 {
+  display: inline-block;
+  border: 5px dotted aqua;
+  color: navy;
+  text-shadow: 1px 1px #eee;
+}
+
+#section-weather article.article {
+  background-color: #ff9974;
+  padding: 10px;
+  text-align: center;
+}
+
+.summary h2,
+.summary h3,
+.summary p {
+  color: navy;
+  margin: 5px;
+}
+
+.summary h2 {
+  border-bottom: 4px solid #ffcc74;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0;
+  padding: 5px 10px;
+}

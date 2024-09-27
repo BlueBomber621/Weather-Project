@@ -52,6 +52,7 @@ ul {
 main {
   padding-top: 103px;
   background-color: blanchedalmond;
+  padding-bottom: 0.1px;
 }
 
 /* Weather Data */
@@ -66,7 +67,9 @@ main {
   padding: 10px;
   text-align: center;
 }
-
+.section-day-title {
+  margin-bottom: 10px;
+}
 .section-weather-title h1,
 .section-day-title h2 {
   display: inline-block;
@@ -75,7 +78,7 @@ main {
   text-shadow: 1px 1px #eee;
 }
 
-#section-weather article.article {
+article.article-data {
   background-color: #ff9974;
   padding: 10px;
   text-align: center;
@@ -83,7 +86,8 @@ main {
 
 .summary h2,
 .summary h3,
-.summary p {
+.summary p,
+.article-five-day h3 {
   color: navy;
   margin: 5px;
 }
@@ -94,4 +98,268 @@ main {
   display: inline-block;
   margin: 0;
   padding: 5px 10px;
+}
+
+.article-data img {
+  width: 60%;
+}
+
+/* 5 day forecast */
+
+.article-five-day {
+  background-color: #ff9974;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.article-five-day .weather-day-column {
+  background-color: aqua;
+  margin: 0 10px;
+  border-bottom: 5px solid navy;
+  border-top: 5px solid navy;
+}
+
+.article-five-day span.column-head {
+  display: block;
+  margin: 5px 15px;
+  padding-bottom: 5px;
+  font-size: 1.5em;
+  color: navy;
+  border-bottom: 5px dashed white;
+}
+
+.article-five-day img {
+  display: block;
+  margin: 5px auto;
+  width: 50%;
+}
+
+.article-five-day span.temp-data {
+  color: navy;
+  display: block;
+  margin: 5px;
+}
+
+/* News */
+
+#section-news {
+  margin: 10px;
+  padding: 15px;
+  background-color: navy;
+}
+
+.section-news-title {
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.section-news-title h1 {
+  color: navy;
+  text-shadow: 1px 1px #444;
+}
+
+#section-news article.article {
+  background-color: #444;
+  border-bottom: 5px solid #eee;
+  padding: 5px;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#section-news article.article img[id*="article-img-"] {
+  display: block;
+  margin: 5px auto;
+  width: 60%;
+  text-align: start;
+}
+
+#section-news article.article h2 {
+  color: white;
+  display: block;
+  margin: 5px 0;
+}
+
+#section-news article.article p {
+  color: #eee;
+  display: block;
+  margin: 5px;
+}
+
+#section-news article.article p#header-description {
+  color: #eee;
+  display: block;
+  margin: 10px 5px;
+  font-size: 18px;
+}
+#section-news article.article img#header-img {
+  display: block;
+  margin: 5px auto;
+  width: 80%;
+  text-align: start;
+}
+
+/* Footer */
+
+hr {
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #444;
+}
+footer {
+  background-color: cornsilk;
+  padding: 10px;
+  text-align: center;
+  max-height: 600px;
+}
+
+/* Anchors */
+
+header a {
+  color: #ffcc74;
+  text-decoration: underline;
+}
+
+header a:hover {
+  color: #ff9974;
+  cursor: pointer;
+}
+
+header a:focus {
+  color: #444;
+}
+
+@media screen and (min-width: 800px) {
+  /* Weather Data (Large) */
+  article.article-data {
+    background-color: #ff9974;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  .article-data div {
+    flex: 3 1 600px;
+    max-width: 800px;
+  }
+
+  div.summary {
+    flex: 1 0 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .summary h2,
+  .summary h3,
+  .summary p,
+  .article-five-day h3 {
+    font-size: 1.5em;
+  }
+
+  /* 5 day forecast (Large) */
+
+  div.weather-day {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  div.weather-day-column {
+    height: 400px;
+    width: 400px;
+    max-width: 18%;
+  }
+
+  .article-five-day span.column-head {
+    display: block;
+    margin: 5px 15px;
+    padding-bottom: 5px;
+    font-size: 2em;
+    color: navy;
+    border-bottom: 5px dashed white;
+  }
+
+  .article-five-day img {
+    width: 70%;
+  }
+
+  .article-five-day span.temp-data {
+    font-size: 1.5em;
+  }
+
+  /* News (Large) */
+
+  #section-news {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .section-news-title {
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .section-news-title h1 {
+    color: navy;
+    text-shadow: 1px 1px #444;
+  }
+
+  #section-news article.article:first-child {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  #section-news article.article {
+    display: inline-flex;
+    flex-direction: column;
+    width: 21%;
+    margin: 10px;
+    height: 492.88px;
+  }
+  #section-news article.article img[id*="article-img-"] {
+    width: 90%;
+    max-width: 260px;
+  }
+  
+  #section-news article.article h2 {
+    color: white;
+    display: block;
+    margin: 10px 0;
+  }
+
+  #section-news article.article p {
+    color: #eee;
+    display: block;
+    margin: 10px;
+  }
+
+  #section-news article.article p#header-description {
+    color: #eee;
+    display: block;
+    margin: 20px 10px;
+    font-size: 22px;
+  }
+  #section-news article.article img#header-img {
+    display: block;
+    margin: 5px auto;
+    width: 80%;
+    text-align: start;
+    max-width: 400px;
+  }
 }

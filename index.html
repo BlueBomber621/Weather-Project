@@ -7,28 +7,27 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    
-      <header>
-        <h1>Weather App</h1>
-        <fieldset class="navigation">
-          <nav>
-            <ul>
-              <li><a href="#section-weather">Home</a></li>
-              <li><a href="#section-news">News</a></li>
-              <li>Weather</li>
-              <li>About</li>
-            </ul>
-          </nav>
-        </fieldset>
-      </header>
+    <header>
+      <h1>Weather App</h1>
+      <fieldset class="navigation">
+        <nav>
+          <ul>
+            <li><a href="#section-weather">Home</a></li>
+            <li><a href="#section-news">News</a></li>
+            <li><a>Weather</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </nav>
+      </fieldset>
+    </header>
     <main>
       <section id="section-weather">
         <div class="page">
           <div class="section-weather-title">
-          <h1>Latest Weather</h1>
+            <h1>Latest Weather</h1>
           </div>
           <div class="archive">
-            <article class="article">
+            <article class="article-data">
               <section id="stats">
                 <div class="summary">
                   <h2>Summary</h2>
@@ -41,7 +40,7 @@
                 </div>
               </section>
               <div>
-                <img src="rainy.png" alt="Weather Image" />
+                <img src="/Weather-Project/rainy.png" alt="Weather Image" />
               </div>
             </article>
 
@@ -49,7 +48,7 @@
             <div class="article-five-day">
               <article id="forecastContainer">
                 <div class="section-day-title">
-                <h2 id="forecastSection">5 Day Forecast</h2>
+                  <h2 id="forecastSection">5 Day Forecast</h2>
                 </div>
                 <h3>Salt Lake City</h3>
                 <div class="weather-day">
@@ -57,7 +56,7 @@
                   <div class="weather-day-column">
                     <span id="dayOneTitle" class="column-head">Day 1</span>
                     <img
-                      src="partiallycloudy.png"
+                      src="/Weather-Project/partiallycloudy.png"
                       alt="Weather Image"
                     />
                     <span class="temp-data">
@@ -68,7 +67,7 @@
                   <!-- Day Two -->
                   <div class="weather-day-column">
                     <span id="dayTwoTitle" class="column-head">Day 2</span>
-                    <img src="rainy.png" alt="Weather Image" />
+                    <img src="/Weather-Project/rainy.png" alt="Weather Image" />
                     <span class="temp-data">
                       <span>52</span>
                       <span>°F</span>
@@ -78,7 +77,7 @@
                   <div class="weather-day-column">
                     <span id="dayThreeTitle" class="column-head">Day 3</span>
                     <img
-                      src="partiallycloudy.png"
+                      src="/Weather-Project/partiallycloudy.png"
                       alt="Weather Image"
                     />
                     <span class="temp-data">
@@ -89,7 +88,7 @@
                   <!-- Day Four -->
                   <div class="weather-day-column">
                     <span id="dayFourTitle" class="column-head">Day 4</span>
-                    <img src="sunny.png" alt="Weather Image" />
+                    <img src="/Weather-Project/sunny.png" alt="Weather Image" />
                     <span class="temp-data">
                       <span>58</span>
                       <span>°F</span>
@@ -98,7 +97,7 @@
                   <!-- Day Five -->
                   <div class="weather-day-column">
                     <span id="dayFiveTitle" class="column-head">Day 5</span>
-                    <img src="windy.png" alt="Weather Image" />
+                    <img src="/Weather-Project/windy.png" alt="Weather Image" />
                     <span class="temp-data">
                       <span>58</span>
                       <span>°F</span>
@@ -112,38 +111,60 @@
       </section>
       <section id="section-news">
         <div class="page">
-          <h1 class="section-news-title">Latest News</h1>
+          <div class="section-news-title">
+            <h1>Latest News</h1>
+          </div>
           <div class="archive">
             <article class="article">
-              <img id="header-img" alt="Main Article">
+              <img
+                id="header-img"
+                src="/Weather-Project/newspaper.jfif"
+                alt="Main Article"
+              />
               <h2>
                 <a id="header-article"></a>
               </h2>
               <p id="header-description">No article description.</p>
             </article>
-            <article class="article"></article>
-              <img id="article-img-1" src="newspaper.jfif" alt="Main Article">
+            <article class="article">
+              <img
+                id="article-img-1"
+                src="/Weather-Project/newspaper.jfif"
+                alt="Main Article"
+              />
               <h2>
                 <a id="article-1-header">No article header</a>
               </h2>
               <p id="article-1-description">No article description.</p>
             </article>
-            <article class="article"></article>
-              <img id="article-img-2" src="newspaper.jfif" alt="Main Article">
+            <article class="article">
+              <img
+                id="article-img-2"
+                src="/Weather-Project/newspaper.jfif"
+                alt="Main Article"
+              />
               <h2>
                 <a id="article-2-header">No article header</a>
               </h2>
               <p id="article-2-description">No article description.</p>
             </article>
             <article class="article">
-              <img id="article-img-3" src="newspaper.jfif" alt="Main Article">
+              <img
+                id="article-img-3"
+                src="/Weather-Project/newspaper.jfif"
+                alt="Main Article"
+              />
               <h2>
                 <a id="article-3-header">No article header</a>
               </h2>
               <p id="article-3-description">No article description.</p>
             </article>
-            <article class="article"></article>
-              <img id="article-img-4" src="newspaper.jfif" alt="Main Article">
+            <article class="article">
+              <img
+                id="article-img-4"
+                src="/Weather-Project/newspaper.jfif"
+                alt="Main Article"
+              />
               <h2>
                 <a id="article-4-header">No article header</a>
               </h2>
@@ -153,13 +174,19 @@
         </div>
       </section>
     </main>
+    <!-- "hr" is a thematic line break -->
+    <hr />
     <footer>
-      <!-- "hr" is a thematic line break -->
-      <hr />
-      <span id="year">2024</span> | Blaine Curtis | <a href="https://tooeletech.edu/" target="_blank" rel="noopener noreferrer">Tooele Technical College</a>
+      <span id="year">2024</span> | Blaine Curtis |
+      <a
+        href="https://tooeletech.edu/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Tooele Technical College</a
+      >
       <p>Last Updated: Fri Jul 30 2024</p>
       <!-- "br" is a normal line break -->
-      <br>
+      <br />
     </footer>
   </body>
 </html>

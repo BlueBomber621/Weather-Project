@@ -4,25 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header></header>
-    <fieldset>
-      <nav>
-        <ul>
-          <li><a href="#section-weather">Home</a></li>
-          <li><a href="#section-news">News</a></li>
-          <li>Weather</li>
-          <li style="float: left">About</li>
-        </ul>
-      </nav>
-    </fieldset>
+    <header>
+      <h1>Weather App</h1>
+      <fieldset class="navigation">
+        <nav>
+          <ul>
+            <li><a href="#section-weather">Home</a></li>
+            <li><a href="#section-news">News</a></li>
+            <li><a>Weather</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </nav>
+      </fieldset>
+    </header>
     <main>
       <section id="section-weather">
         <div class="page">
-          <h1 class="section-weather-title">Latest Weather</h1>
+          <div class="section-weather-title">
+            <h1>Latest Weather</h1>
+          </div>
           <div class="archive">
-            <article class="article">
+            <article class="article-data">
               <section id="stats">
                 <div class="summary">
                   <h2>Summary</h2>
@@ -42,7 +47,9 @@
             <!-- 5 day forecast -->
             <div class="article-five-day">
               <article id="forecastContainer">
-                <h2 id="forecastSection">5 Day Forecast</h2>
+                <div class="section-day-title">
+                  <h2 id="forecastSection">5 Day Forecast</h2>
+                </div>
                 <h3>Salt Lake City</h3>
                 <div class="weather-day">
                   <!-- Day One -->
@@ -104,38 +111,60 @@
       </section>
       <section id="section-news">
         <div class="page">
-          <h1 class="section-news-title">Latest News</h1>
+          <div class="section-news-title">
+            <h1>Latest News</h1>
+          </div>
           <div class="archive">
             <article class="article">
-              <img id="header-img" alt="Main Article">
+              <img
+                id="header-img"
+                src="/Weather-Project/newspaper.jfif"
+                alt="Main Article"
+              />
               <h2>
                 <a id="header-article"></a>
               </h2>
               <p id="header-description">No article description.</p>
             </article>
-            <article class="article"></article>
-              <img id="article-img-1" src="/Weather-Project/newspaper.jfif" alt="Main Article">
+            <article class="article">
+              <img
+                id="article-img-1"
+                src="/Weather-Project/newspaper.jfif"
+                alt="Main Article"
+              />
               <h2>
                 <a id="article-1-header">No article header</a>
               </h2>
               <p id="article-1-description">No article description.</p>
             </article>
-            <article class="article"></article>
-              <img id="article-img-2" src="/Weather-Project/newspaper.jfif" alt="Main Article">
+            <article class="article">
+              <img
+                id="article-img-2"
+                src="/Weather-Project/newspaper.jfif"
+                alt="Main Article"
+              />
               <h2>
                 <a id="article-2-header">No article header</a>
               </h2>
               <p id="article-2-description">No article description.</p>
             </article>
             <article class="article">
-              <img id="article-img-3" src="/Weather-Project/newspaper.jfif" alt="Main Article">
+              <img
+                id="article-img-3"
+                src="/Weather-Project/newspaper.jfif"
+                alt="Main Article"
+              />
               <h2>
                 <a id="article-3-header">No article header</a>
               </h2>
               <p id="article-3-description">No article description.</p>
             </article>
-            <article class="article"></article>
-              <img id="article-img-4" src="/Weather-Project/newspaper.jfif" alt="Main Article">
+            <article class="article">
+              <img
+                id="article-img-4"
+                src="/Weather-Project/newspaper.jfif"
+                alt="Main Article"
+              />
               <h2>
                 <a id="article-4-header">No article header</a>
               </h2>
@@ -145,13 +174,19 @@
         </div>
       </section>
     </main>
+    <!-- "hr" is a thematic line break -->
+    <hr />
     <footer>
-      <!-- "hr" is a thematic line break -->
-      <hr />
-      <span id="year">2024</span> | Blaine Curtis | <a href="https://tooeletech.edu/" target="_blank" rel="noopener noreferrer">Tooele Technical College</a>
+      <span id="year">2024</span> | Blaine Curtis |
+      <a
+        href="https://tooeletech.edu/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Tooele Technical College</a
+      >
       <p>Last Updated: Fri Jul 30 2024</p>
       <!-- "br" is a normal line break -->
-      <br>
+      <br />
     </footer>
   </body>
 </html>

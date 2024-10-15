@@ -31,16 +31,22 @@
               <section id="stats">
                 <div class="summary">
                   <h2>Summary</h2>
-                  <h3>Salt Lake City</h3>
-                  <p>Weather: Rainy</p>
-                  <p>Tempurature: 52°F</p>
-                  <p>Windchill: 5°F</p>
-                  <p>Humidity: 35%</p>
-                  <p>Wind Speed: 2 mph</p>
+                  <h3><span id="locationLabel"></span></h3>
+                  <p>Description: <span id="currentDesc"></span></p>
+                  <p>Weather: <span id="currentWeather"></span></p>
+                  <p>Tempurature: <span id="currentTemp"></span>°F</p>
+                  <p>Feels Like: <span id="currentFeels"></span>°F</p>
+                  <p>Humidity: <span id="currentHumidity"></span>%</p>
+                  <p>Windchill: <span id="currentWindchill"></span>°F</p>
+                  <p>Wind Speed: <span id="currentWindspeed"></span> mph</p>
                 </div>
               </section>
               <div>
-                <img src="/Weather-Project/rainy.png" alt="Weather Image" />
+                <img
+                  src="/Weather-Project/sunny.png"
+                  alt="Weather Image"
+                  id="currentWeatherImg"
+                />
               </div>
             </article>
 
@@ -50,7 +56,7 @@
                 <div class="section-day-title">
                   <h2 id="forecastSection">5 Day Forecast</h2>
                 </div>
-                <h3>Salt Lake City</h3>
+                <h3><span id="locationLabel2"></span></h3>
                 <div class="weather-day">
                   <!-- Day One -->
                   <div class="weather-day-column">
@@ -58,19 +64,24 @@
                     <img
                       src="/Weather-Project/partiallycloudy.png"
                       alt="Weather Image"
+                      id="dayImg1"
                     />
                     <span class="temp-data">
-                      <span>56</span>
-                      <span>°F</span>
+                      <span id="dayTempOne"></span>
+                      <span><span id="dayTemp1"></span>°F</span>
                     </span>
                   </div>
                   <!-- Day Two -->
                   <div class="weather-day-column">
                     <span id="dayTwoTitle" class="column-head">Day 2</span>
-                    <img src="/Weather-Project/rainy.png" alt="Weather Image" />
+                    <img
+                      src="/Weather-Project/rainy.png"
+                      alt="Weather Image"
+                      id="dayImg2"
+                    />
                     <span class="temp-data">
-                      <span>52</span>
-                      <span>°F</span>
+                      <span id="dayTempTwo"></span>
+                      <span><span id="dayTemp2"></span>°F</span>
                     </span>
                   </div>
                   <!-- Day Three -->
@@ -79,28 +90,37 @@
                     <img
                       src="/Weather-Project/partiallycloudy.png"
                       alt="Weather Image"
+                      id="dayImg3"
                     />
                     <span class="temp-data">
-                      <span>55</span>
-                      <span>°F</span>
+                      <span id="dayTempThree"></span>
+                      <span><span id="dayTemp3"></span>°F</span>
                     </span>
                   </div>
                   <!-- Day Four -->
                   <div class="weather-day-column">
                     <span id="dayFourTitle" class="column-head">Day 4</span>
-                    <img src="/Weather-Project/sunny.png" alt="Weather Image" />
+                    <img
+                      src="/Weather-Project/sunny.png"
+                      alt="Weather Image"
+                      id="dayImg4"
+                    />
                     <span class="temp-data">
-                      <span>58</span>
-                      <span>°F</span>
+                      <span id="dayTempFour"></span>
+                      <span><span id="dayTemp4"></span>°F</span>
                     </span>
                   </div>
                   <!-- Day Five -->
                   <div class="weather-day-column">
                     <span id="dayFiveTitle" class="column-head">Day 5</span>
-                    <img src="/Weather-Project/windy.png" alt="Weather Image" />
+                    <img
+                      src="/Weather-Project/windy.png"
+                      alt="Weather Image"
+                      id="dayImg5"
+                    />
                     <span class="temp-data">
-                      <span>58</span>
-                      <span>°F</span>
+                      <span id="dayTempFive"></span>
+                      <span><span id="dayTemp5"></span>°F</span>
                     </span>
                   </div>
                 </div>
@@ -177,16 +197,17 @@
     <!-- "hr" is a thematic line break -->
     <hr />
     <footer>
-      <span id="year">2024</span> | Blaine Curtis |
+      <span id="yearLabel"></span> | Blaine Curtis |
       <a
         href="https://tooeletech.edu/"
         target="_blank"
         rel="noopener noreferrer"
         >Tooele Technical College</a
       >
-      <p>Last Updated: Fri Jul 30 2024</p>
+      <p>Last Updated: <span id="updateLabel"></span></p>
       <!-- "br" is a normal line break -->
       <br />
     </footer>
+    <script src="weather-header.js"></script>
   </body>
 </html>

@@ -12,10 +12,12 @@ const yearLabel = document.querySelector("#yearLabel");
 const dateLabel = document.querySelector("#updateLabel");
 
 const apiKey = `6889d54772037a7b65e98163b54881be`;
+const apiKey2 = `44fbae7e93b44a6ba1d285d09d6e44da`;
 const lat = 68;
 const lon = 42;
 const url = `https://api.openweathermap.org/data/2.5/weather?q=tooele&units=imperial&appid=${apiKey}`;
 const url2 = `https://api.openweathermap.org/data/2.5/forecast?q=tooele&units=imperial&appid=${apiKey}`;
+const url3 = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey2}`;
 
 const year = new Date().getFullYear().toLocaleString();
 const date = new Date().toLocaleDateString();
@@ -68,7 +70,6 @@ fetch(url2)
     const data = jsObject;
     locationLabelTwo.innerHTML = data.city.name;
     const dayData = data.list;
-    console.log(jsObject);
     for (let i = 0; i < dayData.length / 8; i++) {
       const element = dayData[i * 8];
       let spot = i + 1;
@@ -92,6 +93,47 @@ fetch(url2)
       ) {
         document.getElementById(imgLabel).src = "/Weather-Project/thunder.png";
       }
-      console.log(element);
     }
+  });
+
+fetch(url3)
+  .then((response) => response.json())
+  .then((jsObject) => {
+    const mainImg = document.getElementById("header-img");
+    const mainDesc = document.getElementById("header-description");
+    const mainElement = jsObject.articles[0];
+
+    if (!mainElement.description == "") {
+      mainDesc.querySelector("a").innerText = mainElement.description;
+    } else {
+      mainDesc.querySelector("a").innerText = "No Article Description.";
+    }
+    if (mainElement.urlToImage == null) {
+    } else {
+      mainImg.src = mainElement.urlToImage;
+    }
+    if (mainElement.url == null) {
+    } else {
+      mainDesc.querySelector("a").href = mainElement.url;
+    }
+
+    for (let i = 0; i <= 3; i++) {
+      const element = jsObject.articles[i + 1];
+      let spot = i + 1;
+      let spotLabel = `article-${spot}-header`;
+      let spotDesc = `article-${spot}-description`;
+      let spotImg = `article-img-${spot}`;
+      document.getElementById(spotLabel).innerText = element.title;
+      document.getElementById(spotLabel).href = element.url;
+      if (!element.description == "") {
+        document.getElementById(spotDesc).innerText = element.description;
+      } else {
+        document.getElementById(spotDesc).innerText = "No Article Description.";
+      }
+      if (element.urlToImage == null) {
+      } else {
+        document.getElementById(spotImg).src = element.urlToImage;
+      }
+    }
+    console.log(jsObject);
   });
